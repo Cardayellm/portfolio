@@ -2,447 +2,479 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cardayell Morgan</title>
 
-    <!-- Bootstrap css file -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>Cardayell Morgan — Software Engineer</title>
+    <meta name="description" content="Cardayell Morgan is a software engineer in the San Francisco Bay Area with experience in network technologies and an interest in smart-city development. Experience, projects, and photography.">
+    <meta name="author" content="Cardayell Morgan">
+    <link rel="canonical" href="https://www.cardayell.com/">
+    <meta name="theme-color" content="#2f5597">
 
-    <!-- font awesome icons -->
-    <link rel="stylesheet" href="css/all.min.css">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Cardayell Morgan">
+    <meta property="og:title" content="Cardayell Morgan — Software Engineer">
+    <meta property="og:description" content="Software engineer in the San Francisco Bay Area. Experience, projects, and photography.">
+    <meta property="og:url" content="https://www.cardayell.com/">
+    <meta property="og:image" content="https://www.cardayell.com/img/og-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Cardayell Morgan — Software Engineer">
+    <meta name="twitter:description" content="Software engineer in the San Francisco Bay Area. Experience, projects, and photography.">
+    <meta name="twitter:image" content="https://www.cardayell.com/img/og-image.jpg">
 
-    <!-- custom css file -->
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="favicon.svg">
+
+    <link rel="preload" as="font" type="font/ttf" href="fonts/Roboto/Roboto-Regular.ttf" crossorigin>
+    <link rel="preload" as="font" type="font/ttf" href="fonts/OCR-A/OCR-A-Regular.ttf" crossorigin>
+
     <link rel="stylesheet" href="css/style.css">
-
-    <!--responsive css file -->
-    <link rel="stylesheet" href="css/responsive.css">
-
-    <!-- custom css file -->
-    <link rel="stylesheet" href="css/variables.css">
-
-    <!-- custom css file -->
-    <link rel="stylesheet" href="css/global.css">
-
 </head>
 <body>
 
-    <!-- ======================================== Start Header Area ================================== -->
-    
-    <header class="header_area">
-        <div class="main-menu">
-            <nav class="navbar navbar-expand-lg navbar-light">
-                <div class="container-fluid">
-                  <a class="navbar-brand" href="#">Cardayell Morgan</a>
-                  
-                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
-                  <div class="collapse navbar-collapse" id="navbarNav">
-                    <div class="me-auto"></div>
-                    <ul class="navbar-nav">
-                      <li class="nav-item">
-                        <a class="nav-link" href="#edu-and-exp">Education and Experience</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="#projects">Projects</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="#about-me">About Me</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="./downloads/Cardayell_Morgan_Resume.pdf" download>Resume</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="mailto:contact@cardayell.com">contact</i></a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </nav>
-        </div>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <!-- ============================ Header ============================ -->
+    <header class="site-header" id="top">
+      <div class="wrap site-header__inner">
+        <a class="brand" href="#">Cardayell Morgan</a>
+
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+        </button>
+
+        <nav class="site-nav" id="site-nav" aria-label="Primary">
+          <ul class="site-nav__list">
+            <li><a class="site-nav__link" href="#skills">Skills</a></li>
+            <li><a class="site-nav__link" href="#experience">Experience</a></li>
+            <li><a class="site-nav__link" href="#education">Education</a></li>
+            <li><a class="site-nav__link" href="#projects">Projects</a></li>
+            <li><a class="site-nav__link" href="#personal-life">Personal</a></li>
+            <li><a class="site-nav__link" href="./downloads/Cardayell_Morgan_Resume.pdf" download>Resume</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
+    <main id="main" class="site-main">
 
-    <!-- ======================================== End Header Area ================================== -->
-
-    <!-- ======================================== Start Main Area ================================== -->
-    <main class="site-main">
-
-
-      <!-- ======================================== Start Banner Area ================================== -->
-        <section class="site-banner">
-          <div class="container">
-            <div class="row">
-              <div class="col-lg-6 col-md-12 site-title">
-                <h3 class="title-text"></h3>
-                <h1 class="title-text">Hi, I'm Cardayell</h1>
-                <h4 class="title-text text-uppercase">Software Engineer | Solutions Engineer</h4>
-                <div class="site-buttons">
-                  <div class="d-flex flex-row flex-wrap">
-                    <a href="#about-me">
-                      <button type="button" class="btn button primary-button me-4 text-uppercase">about me</button>
-                    </a>
-                    <a href="./downloads/Cardayell_Morgan_Resume.pdf" download>
-                      <button type="button" class="btn button primary-button text-uppercase">Resume</button>
-                    </a>
-                  </div>
-                  <div class="social row">
-                    <div class="col">
-                      <a href="mailto:contact@cardayell.com"><i class="fas fa-envelope"></i></a>
-                    </div>
-                    <div class="col">
-                      <a href="tel:+1-775-223-9274"><i class="fas fa-phone"></i></a>
-                    </div>
-                    <div class="col">
-                      <a href="https://www.linkedin.com/in/cardayell-morgan/"><i class="fab fa-linkedin"></i></a>
-                    </div>
-                    <div class="col">
-                      <a href="https://github.com/Cardayellm/"><i class="fab fa-github"></i></a>
-                    </div>
-                  </div>
-                </div> 
-              </div>
-              <div class="col-lg-6 col-md-12 banner-img">
-                <img src="./img/banner/banner-image.png" alt="banner-img" class="img-fluid">
-              </div>
+      <!-- ============================ Hero ============================ -->
+      <section class="hero" aria-labelledby="hero-heading">
+        <div class="wrap hero__inner">
+          <div class="hero__text">
+            <h1 class="hero__title" id="hero-heading" aria-label="Hi, I'm Cardayell">Hi, I'm Cardayell <button class="pronounce" type="button" data-audio="./audio/cardayell-pronunciation.m4a" aria-label="Hear how to pronounce Cardayell" aria-pressed="false">
+                <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false">
+                  <path fill="currentColor" d="M4 9v6h4l5 5V4L8 9H4Z"/>
+                  <path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" d="M16.2 8.2a5.5 5.5 0 0 1 0 7.6M18.8 5.6a9.2 9.2 0 0 1 0 12.8"/>
+                </svg>
+                <span class="visually-hidden">Hear pronunciation</span>
+              </button></h1>
+            <audio class="pronounce__audio" preload="none">
+              <source src="./audio/cardayell-pronunciation.m4a" type="audio/mp4">
+            </audio>
+            <p class="hero__summary"><strong>Backend Software Engineer</strong> with <strong>5 years of experience</strong> (plus 2 in IT Support) who works comfortably across engineering, product, and customer-facing teams. Domain experience in <strong>fintech, payments, and loyalty solutions</strong>. Proficient in building with AI coding tools and integrating GenAI/LLMs into software.</p>
+            <div class="hero__actions">
+              <a class="btn btn--lg" href="./downloads/Cardayell_Morgan_Resume.pdf" download>Resume</a>
+              <ul class="social" aria-label="Contact links">
+                <li>
+                  <a class="social__link" href="mailto:contact@cardayell.com" aria-label="Email Cardayell">
+                    <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M2 5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5Zm2.4.4L12 11l7.6-5.6H4.4ZM20 7.2l-7.4 5.5a1 1 0 0 1-1.2 0L4 7.2V19h16V7.2Z"/></svg>
+                  </a>
+                </li>
+                <li>
+                  <a class="social__link" href="https://www.linkedin.com/in/cardayell-morgan/" target="_blank" rel="noopener" aria-label="Cardayell on LinkedIn">
+                    <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3V9Zm6 0h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05C19.5 8.65 21 10.5 21 14v7h-4v-6.2c0-1.48-.03-3.4-2.07-3.4-2.07 0-2.39 1.62-2.39 3.29V21H9V9Z"/></svg>
+                  </a>
+                </li>
+                <li>
+                  <a class="social__link" href="https://github.com/Cardayellm/" target="_blank" rel="noopener" aria-label="Cardayell on GitHub">
+                    <svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48l-.01-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.56 9.56 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85l-.01 2.75c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>
+                  </a>
+                </li>
+              </ul>
             </div>
           </div>
-        </section>
-      <!-- ======================================== End Banner Area ================================== -->
-
-      <section id="edu-and-exp" class="body-break"></section>
-
-      <!-- ======================================== Start Work Experience and Education Area ================================== -->
-
-      <section class="edu-and-exp-area">
-        <div class="container">
-          <div class="post">
-            <div class="body-sub-header">Work Experience</div>
-            <div class="row">
-              <div class="col-8">        
-                  <div class="experience-title">Full Stack Software Engineer</div>
-                  <div class="experience-date">Oct 2024 – Present</div>
-                    <li class="things-done-list">Part of the Visa Innovation Center and Regional Solutions team developing new products</li>
-              </div>
-              <div class="col-4">
-                <div class="edu-and-exp-body-img">
-                  <img src="./img/objects/visa-logo.png" alt="Visa-logo">
-                </div>
-              </div>
-            </div>
-              <div class="row">
-                <div class="col-8">        
-                    <div class="experience-title">Software Engineer</div>
-                    <div class="experience-date">Sep 2021 – Jan 2024</div>
-                      <li class="things-done-list">Completed Python, Java, MongoDB, Express, Angular, and Node.js internal trainings</li>
-                      <li class="things-done-list">Accustomed to changing projects and teams often and ramping up quickly</li>
-                      <li class="things-done-list">Trained in effective communication, data security, and current industry trends</li>
-                </div>
-                <div class="col-4">
-                  <div class="edu-and-exp-body-img">
-                    <img src="./img/objects/TCS-logo.png" alt="tcs-logo">
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-8">        
-                    <div class="experience-title">Software Engineer (Contractor)</div>
-                    <div class="experience-date">Feb 2022 – Nov 2023</div>
-                      <li class="things-done-list">Developed software with Python and XML files for network management software used on systems of 500,000+ network devices, with 10+ different network device types</li>
-                      <li class="things-done-list">Cooperatively designed and developed features in agile and waterfall based teams</li>
-                      <li class="things-done-list">Worked with GIT source control along with Docker & Jenkins for automated testing</li>
-                      <li class="things-done-list">Added unit tests that addressed ~10% of missing testing code coverage</li>
-                      <li class="things-done-list">Resolved user reported defects relating to back-end and front-end components</li>
-                </div>
-                <div class="col-4">
-                  <div class="edu-and-exp-body-img">
-                    <img src="./img/objects/cisco-logo.png" alt="cisco-logo">
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-8">        
-                    <div class="experience-title">Student Senior IT Technician</div>
-                    <div class="experience-date">Sep 2018 – July 2021</div>
-                      <li class="things-done-list">Daily troubleshooting with staff and students with IT issues through phone and online chat</li>
-                      <li class="things-done-list">Submission of completed/escalated issues into department wide ticketing system</li>
-                      <li class="things-done-list">Remotely connected to user computers to trouble shoot and solve issues</li>
-                      <li class="things-done-list">Performed training and communication to 12 in office IT technicians</li>
-                      <li class="things-done-list">Operated front desk of call center talking to university members in person and resolving their issues</li>
-                </div>
-                <div class="col-4">
-                  <div class="edu-and-exp-body-img">
-                    <img src="./img/objects/unr-logo.png" alt="unr-logo">
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                  <div class="col-8">        
-                    <div class="experience-title">Student Research Assistant</div>
-                    <div class="experience-date">Jan 2020 – May 2020</div>
-                      <li class="things-done-list">Worked with a small team under the Dean of Students to research factors that influence students’ sense of belonging at the university</li>
-                      <li class="things-done-list">Analyzed data in Excel and cooperatively produced a report that was presented to the university board of regents</li>
-                </div>
-                <div class="col-4">
-                  <div class="edu-and-exp-body-img">
-                   <img src="./img/objects/unr-logo.png" alt="unr-logo">
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="body-sub-header">Education</div>
-              <div id="top-row" class="row">
-                <div class="col-8">                
-                  <div class="degree-title">B.S. Computer Science & Engineering</div>
-                    <li class="things-done-list">GPA of 3.7/4.0</li>
-                    <li class="things-done-list">Honors Degree</li>
-                    <li class="things-done-list">Math Minor | Business Administration Minor</li>
-                    <div class="transcript-button">
-                      <a href="./downloads/Cardayell_Morgan_Unoffical_Transcript.pdf" download>
-                        <button type="button" class="btn button primary-button">Unoffical Transcript</button>
-                      </a>
-                    </div>                    
-                </div>
-                <div class="col-4">
-                  <div class="edu-and-exp-body-img">
-                    <img src="./img/objects/unr-logo.png" alt="unr-logo">
-                  </div>
-                </div>
-              </div>            
-        </div>
-      </section>  
-
-      <!-- ======================================== End Work Experience and Education Area ================================== -->
-
-      <section id="projects" class="body-break"></section>
-
-      <!-- ======================================== Start Projects Area ================================== -->
-
-      <section class="projects-area">
-        <div class="container">
-          <div class="post">
-            <header class="post-header">
-              <h2 class="body-header">Projects</h2>
-            </header>
-            <div class="project-title">SnowPass</div>
-            <a href="https://www.checkthepass.com" class="project-description">checkthepass.com</a>
-            <div class="project-description">Web application for live weather, traffic camera video, and department of transportation updates along a route</div>
-            <div class="project-description">Role: Software Developer and Lead Contact</div>
-            <div class="project-description">Team: Four other fourth year Computer Science majors</div>
-            <div class="project-title">Description</div>
-            <div class="paragraph">
-              <p class="para">
-                Heavy snowfall, strong winds, and low temperatures are common during the winter in northern Nevada. Knowledge of relevant road conditions is vital for safe travel for drivers taking trips through these regions. This information is currently accessible through multiple different sources. SnowPass streamlines the gathering of road condition data and compiles it into one easy-to-use application.  After choosing any two points in California or Nevada, SnowPass will show the best route then display route specific weather, live traffic camera video, and Department of Transportation Tweets, helping drivers stay safe and informed.
-              </p>
-            </div>
-            <div class="project-body-img">
-              <img src="./img/objects/SnowPass-main.PNG" alt="SnowPass-main-page">
-            </div>
-            <div class="project-title">SnowPass summary video (presented by me) and demo</div>
-            <div class="project-body-vid">
-              <iframe width=100% height=100% src="https://www.youtube.com/embed/vvGn8PDbXjU?start=77" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <div class="row">
-              <div class="col">
-                <div class="project-title">My Contribution</div>
-                <li class="things-done-list">Cooperatively designed and programed front-end components</li>
-                <li class="things-done-list">Led the team in presentation of the application to university staff and Reno community members</li>
-                <li class="things-done-list">Communicated with California and Nevada departments of transportation and other leading inteligent transportation systems engineers</li>
-                <li class="things-done-list">Used agile methodology with scrum and sprint planning, dynamically adapting to project requirements and restrictions</li>
-                <li class="things-done-list">Implemented weather and X (formally known as Twitter) APIs</li>
-              </div>
-              <div class="col">
-                <div class="projects-team">
-                  <img src="./img/objects/SnowPass-team.png" alt="SnowPass-team">
-                 </div>
-              </div>
-            </div>
-            <div class="project-title">Steel Bridge Inspection Robot</div>
-            <div class="project-description">Robot designed to inspect steel structures for defects or degrading materials</div>
-            <div class="project-description">Role: Business Analyst and Software Specialist</div>            
-            <div class="project-description">Team: One other civil engineer and one other electrical engineer</div>
-            <div class="project-title">Description</div>
-            <div class="paragraph">
-              <p class="para">
-                Steel bridge inspection robot developed at the Advanced Robotics and Automation (ARA) Lab at the University of Nevada, Reno. The robot can climb on different steel bridge structures and collect visual and eddy current data for inspection. The eddy current data senses deep within the steel to detect defects and deterioration. Visual maps are then generated to show the condition of the steel.
-              </p>
-            </div>
-            <div class="project-body-img">
-              <img src="./img/objects/Steel-Robot-main.png" alt="Steel-Robot-main">
-            </div>
-            <div class="project-title">Steel Bridge Inspection Robot pitch meeting</div>
-            <div class="project-body-vid">
-              <iframe width=100% height=100% src="https://www.youtube.com/embed/HZk49iFodzc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <div class="row">
-              <div class="col">
-                <div class="project-title">My Contribution</div>
-                <li class="things-done-list">Researched software components to be able to answer software related questions from potential stakeholders</li>
-                <li class="things-done-list">Cooperatively analyzed viability and created potential business plan for a steel bridge inspection robot company</li>
-                <li class="things-done-list">Analyzed potential share of market, serviceable available market, and total available market</li>
-                <li class="things-done-list">Led meeting with Pennsylvania Department of Transportation discussing potential viability of robot use</li>
-              </div>
-            </div>
-          </div>
+          <div class="hero__media">
+            <img class="hero__portrait" src="./img/banner/banner-image.png" width="520" height="520" alt="Portrait of Cardayell Morgan" fetchpriority="high">
           </div>
         </div>
-      </section> 
-       
+      </section>
 
-      <!-- ======================================== End Education and Experience Area ================================== -->
+      <div class="divider" role="presentation"></div>
 
-      <section id="about-me" class="body-break"></section>
+      <!-- ============================ Skills ============================ -->
+      <section class="section" id="skills" aria-labelledby="skills-heading">
+        <div class="wrap">
+          <h2 class="section-title" id="skills-heading">Skills</h2>
 
-      <!-- ======================================== Start About Area ================================== -->
+          <ul class="skills__legend">
+            <li><span class="skills__swatch skills__swatch--proficient"></span>Proficient</li>
+            <li><span class="skills__swatch skills__swatch--knowledgeable"></span>Knowledgeable</li>
+          </ul>
 
-      <section class="about-area">
-        <div class="container">
-          <div class="post">
-            <header class="post-header">
-              <h2 class="body-header">About Me</h2>
-            </header>
-            <div class="paragraph">
-              <p class="para">
-                Early career Software Engineer working in the San Francisco Bay Area with experience in network technologies. Exploring options for domain specialization in the industry. Ideally heading towards smart city related technology development. Passionate about software and hardware innovations in civil infrastructure such as robotic structure inspection, city wide sensor networks, and other smart city technologies. Aspiration to one day transition into an administrative position in the tech industry but currently enjoying the engineering aspect of the field. Interested in entrepreneurship or startup opportunities.  
-              </p>
+          <div class="skills">
+            <div class="skills__group">
+              <h3 class="skills__label">Languages</h3>
+              <ul class="tags">
+                <li class="is-proficient">Java<span class="visually-hidden"> — proficient</span></li>
+                <li class="is-proficient">Python<span class="visually-hidden"> — proficient</span></li>
+                <li class="is-proficient">SQL<span class="visually-hidden"> — proficient</span></li>
+                <li class="is-proficient">HTML<span class="visually-hidden"> — proficient</span></li>
+                <li class="is-proficient">CSS<span class="visually-hidden"> — proficient</span></li>
+                <li>JavaScript<span class="visually-hidden"> — knowledgeable</span></li>
+                <li>XML<span class="visually-hidden"> — knowledgeable</span></li>
+                <li>C++<span class="visually-hidden"> — knowledgeable</span></li>
+                <li>Go<span class="visually-hidden"> — knowledgeable</span></li>
+              </ul>
             </div>
-            <div class="project-title">Professional Areas of Interest</div>
-              <li class="things-done-list">Smart city technologies</li>
-              <li class="things-done-list">A.I. created music</li>
-              <li class="things-done-list">A.I. Rationale Generation</li>
-              <li class="things-done-list">Robotics and human robot interaction (HRI)</li>
-              <li class="things-done-list">Internet of things optimization</li>
-            <div class="project-title">Photography</div>
-            <div class="paragraph">
-              <p class="para">
-                I am a amateur photographer and my favorite types of composition are cityscape, landscape, and street photography. Here are some examples along with a link to my stock image profile.
-              </p>
+            <div class="skills__group">
+              <h3 class="skills__label">Frameworks &amp; Runtimes</h3>
+              <ul class="tags">
+                <li class="is-proficient">React<span class="visually-hidden"> — proficient</span></li>
+                <li class="is-proficient">Spring Boot<span class="visually-hidden"> — proficient</span></li>
+              </ul>
             </div>
-          </div>
-            <div class="photo-gallery">
-              <div class="container" style="padding: 0px;">
-                <div class="photo-slides">
-                  <img src="./img/photos/img-1.jpg" style="width:100%">
-                </div>              
-                <div class="photo-slides">
-                  <img src="./img/photos/img-2.jpg" style="width:100%">
-                </div>              
-                <div class="photo-slides">
-                  <img src="./img/photos/img-3.jpg" style="width:100%">
-                </div>                  
-                <div class="photo-slides">
-                  <img src="./img/photos/img-4.jpg" style="width:100%">
-                </div>              
-                <div class="photo-slides">
-                  <img src="./img/photos/img-5.jpg" style="width:100%">
-                </div>                  
-                <div class="photo-slides">
-                  <img src="./img/photos/img-6.jpg" style="width:100%">
-                </div>
-                <div class="photo-slides">
-                  <img src="./img/photos/img-7.jpg" style="width:100%">
-                </div>
-                <div class="photo-slides">
-                  <img src="./img/photos/img-8.jpg" style="width:100%">
-                </div>
-                <div class="photo-slides">
-                  <img src="./img/photos/img-9.jpg" style="width:100%">
-                </div>
-                <div class="photo-slides">
-                  <img src="./img/photos/img-10.jpg" style="width:100%">
-                </div>
-                <div class="photo-slides">
-                  <img src="./img/photos/img-11.jpg" style="width:100%">
-                </div>
-                <div class="photo-slides">
-                  <img src="./img/photos/img-12.jpg" style="width:100%">
-                </div>
-                <div class="photo-slides">
-                  <img src="./img/photos/img-13.jpg" style="width:100%">
-                </div>
-                  
-                <a class="prev" onclick="plusSlides(-1)">❮</a>
-                <a class="next" onclick="plusSlides(1)">❯</a>
-              </div>
-            <div class="project-button">
-              <a href="https://www.shutterstock.com/g/Cardayell">
-                <button type="button" class="btn button primary-button">Shutterstock</button>
-              </a>
-            </div>  
+            <div class="skills__group">
+              <h3 class="skills__label">Data &amp; Infrastructure</h3>
+              <ul class="tags">
+                <li class="is-proficient">Git<span class="visually-hidden"> — proficient</span></li>
+                <li class="is-proficient">REST APIs<span class="visually-hidden"> — proficient</span></li>
+                <li>Docker<span class="visually-hidden"> — knowledgeable</span></li>
+                <li>Jenkins<span class="visually-hidden"> — knowledgeable</span></li>
+                <li>Kafka<span class="visually-hidden"> — knowledgeable</span></li>
+                <li>Temporal<span class="visually-hidden"> — knowledgeable</span></li>
+                <li>AWS<span class="visually-hidden"> — knowledgeable</span></li>
+              </ul>
             </div>
-            <div class="project-title">Lyrics Anotation</div>
-            <div class="paragraph">
-              <p class="para">
-                A hobby of mine is transcribing and annotating song lyrics by giving the lyrics context based on what the artist has said about the song. I do this on Genius.com and annotating lyrics is where I first experienced markup, which eventually led to me exploring web design, then computer science.
-              </p>
+            <div class="skills__group">
+              <h3 class="skills__label">AI Coding</h3>
+              <ul class="tags">
+                <li class="is-proficient">Claude Code<span class="visually-hidden"> — proficient</span></li>
+                <li class="is-proficient">Cline<span class="visually-hidden"> — proficient</span></li>
+                <li class="is-proficient">LLM SDKs<span class="visually-hidden"> — proficient</span></li>
+                <li>Prompt engineering<span class="visually-hidden"> — knowledgeable</span></li>
+              </ul>
             </div>
-            <div class="project-button">
-              <a href="https://genius.com/Programus">
-                <button type="button" class="btn button primary-button">Genius Profile</button>
-              </a>
+            <div class="skills__group">
+              <h3 class="skills__label">Practices</h3>
+              <ul class="tags">
+                <li class="is-proficient">Agile / Scrum<span class="visually-hidden"> — proficient</span></li>
+                <li class="is-proficient">Automation testing<span class="visually-hidden"> — proficient</span></li>
+                <li>Waterfall<span class="visually-hidden"> — knowledgeable</span></li>
+                <li>CI/CD<span class="visually-hidden"> — knowledgeable</span></li>
+              </ul>
+            </div>
+            <div class="skills__group">
+              <h3 class="skills__label">Misc</h3>
+              <ul class="tags">
+                <li>OAuth<span class="visually-hidden"> — knowledgeable</span></li>
+                <li>Tokenization<span class="visually-hidden"> — knowledgeable</span></li>
+              </ul>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- ======================================== Start Photo Gallery Script ================================== -->
+      <div class="divider" role="presentation"></div>
 
-      <script>
-        var slideIndex = 1;
-        showSlides(slideIndex);
-        
-        function plusSlides(n) {
-          showSlides(slideIndex += n);
-        }
-      
-        
-        function showSlides(n) {
-          var i;
-          var slides = document.getElementsByClassName("photo-slides");
-          if (n > slides.length) {slideIndex = 1}
-          if (n < 1) {slideIndex = slides.length}
-          for (i = 0; i < slides.length; i++) {
-              slides[i].style.display = "none";
-          }
-          slides[slideIndex-1].style.display = "block";
-        }
-        </script>
+      <!-- ============================ Work Experience ============================ -->
+      <section class="section" id="experience" aria-labelledby="experience-heading">
+        <div class="wrap">
+          <h2 class="section-title" id="experience-heading">Work Experience</h2>
 
-      <!-- ======================================== End Photo Gallery Script ================================== -->
+          <ol class="timeline">
+            <li class="entry">
+              <div class="entry__body">
+                <p class="eyebrow">Software Engineer – Back-end</p>
+                <p class="entry__company">Visa Inc. · Foster City, California</p>
+                <p class="entry__meta">Sept 2024 – Present</p>
+                <ul class="bullets">
+                  <li>Developing offers and coupons distribution software system scaled to millions of users and supporting different client types, growing the platform from 0 to 21 major clients providing thousands of offers.</li>
+                  <li>Designing, developing, and maintaining RESTful APIs for internal and outward-facing services.</li>
+                  <li>Integrated GenAI to analyze and rank coupon descriptions surfaced to users, using LLMs.</li>
+                  <li>Designed and owned a client facing service enabling configurations affecting the broader system behavior, partnered directly with Product to resolve issues and align on requirements for customers.</li>
+                  <li>Led a team of 5 interns in a coding project that won the company-wide championship over 45 other teams.</li>
+                </ul>
+              </div>
+              <div class="entry__logo">
+                <img src="./img/objects/visa-logo.png" width="180" height="120" alt="Visa logo" loading="lazy" decoding="async">
+              </div>
+            </li>
 
-      <!-- ======================================== End About Area ================================== -->
+            <li class="entry">
+              <div class="entry__body">
+                <p class="eyebrow">Software Engineer Consultant</p>
+                <p class="entry__company">Tata Consultancy Services · Santa Clara, California</p>
+                <p class="entry__meta">Sept 2021 – Jan 2024</p>
+                <ul class="bullets">
+                  <li>Completed Python, Java, SQL, MongoDB, Express, Angular, and Node.js internal training courses.</li>
+                </ul>
+              </div>
+              <div class="entry__logo">
+                <img src="./img/objects/TCS-logo.png" width="180" height="120" alt="Tata Consultancy Services logo" loading="lazy" decoding="async">
+              </div>
+            </li>
 
-      <section class="body-break"></section>
+            <li class="entry">
+              <div class="entry__body">
+                <p class="eyebrow">Software Engineer – Back-end</p>
+                <p class="entry__company">Cisco · San Jose, California</p>
+                <p class="entry__meta">Feb 2022 – Nov 2023</p>
+                <ul class="bullets">
+                  <li>Developed software with Python and XML for network management software for networks of 500,000+ network devices, with 10+ different network device types for Layer 2 and Layer 3.</li>
+                </ul>
+              </div>
+              <div class="entry__logo">
+                <img src="./img/objects/cisco-logo.png" width="180" height="120" alt="Cisco logo" loading="lazy" decoding="async">
+              </div>
+            </li>
+
+            <li class="entry">
+              <div class="entry__body">
+                <p class="eyebrow">Senior IT Technician</p>
+                <p class="entry__company">University of Nevada, Reno · Reno, Nevada</p>
+                <p class="entry__meta">Sept 2019 – July 2021</p>
+                <ul class="bullets">
+                  <li>Performed training and communication to team of 12 IT technicians as well as customer troubleshooting.</li>
+                </ul>
+              </div>
+              <div class="entry__logo">
+                <img src="./img/objects/unr-logo.png" width="160" height="120" alt="University of Nevada, Reno logo" loading="lazy" decoding="async">
+              </div>
+            </li>
+
+            <li class="entry">
+              <div class="entry__body">
+                <p class="eyebrow">IT Technician</p>
+                <p class="entry__company">University of Nevada, Reno · Reno, Nevada</p>
+                <p class="entry__meta">Sept 2018 – Sept 2019</p>
+                <ul class="bullets">
+                  <li>Daily troubleshooting of IT issues with staff and students through phone, online chat, and remote sessions.</li>
+                </ul>
+              </div>
+              <div class="entry__logo">
+                <img src="./img/objects/unr-logo.png" width="160" height="120" alt="University of Nevada, Reno logo" loading="lazy" decoding="async">
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <div class="divider" role="presentation"></div>
+
+      <!-- ============================ Education ============================ -->
+      <section class="section" id="education" aria-labelledby="education-heading">
+        <div class="wrap">
+          <h2 class="section-title" id="education-heading">Education</h2>
+          <ol class="timeline">
+            <li class="entry">
+              <div class="entry__body">
+                <p class="eyebrow">Stanford University</p>
+                <ul class="bullets">
+                  <li>Economic Analysis class — in pursuit of Decision Analysis graduate certificate</li>
+                  <li>In future I hope to further pursue a masters degree</li>
+                </ul>
+              </div>
+              <div class="entry__logo entry__logo--center">
+                <img src="./img/objects/stanford-logo.png" width="156" height="180" alt="Stanford University logo" loading="lazy" decoding="async">
+              </div>
+            </li>
+
+            <li class="entry">
+              <div class="entry__body">
+                <p class="eyebrow">Honor's B.S. Computer Science and Engineering, Class of 2021</p>
+                <p class="entry__company">University of Nevada, Reno</p>
+                <ul class="bullets">
+                  <li>GPA of 3.70 / 4.00</li>
+                  <li>Honors Degree</li>
+                  <li>Minor in Business Administration</li>
+                  <li>Minor in Mathematics</li>
+                </ul>
+                <p class="entry__actions">
+                  <a class="btn btn--ghost" href="./downloads/Cardayell_Morgan_Unoffical_Transcript.pdf" download>Unoffical Transcript</a>
+                </p>
+              </div>
+              <div class="entry__logo">
+                <img src="./img/objects/unr-logo.png" width="160" height="120" alt="University of Nevada, Reno logo" loading="lazy" decoding="async">
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <div class="divider" role="presentation"></div>
+
+      <!-- ============================ Projects ============================ -->
+      <section class="section" id="projects" aria-labelledby="projects-heading">
+        <div class="wrap">
+          <h2 class="section-title" id="projects-heading">Projects</h2>
+
+          <article class="project">
+            <h3 class="project__title">SnowPass</h3>
+            <p class="project__link"><a href="https://www.checkthepass.com" target="_blank" rel="noopener">checkthepass.com</a></p>
+            <p class="project__desc">Web application for live weather, traffic camera video, and department of transportation updates along a route</p>
+            <p class="project__desc">Role: Software Developer and Lead Contact</p>
+            <p class="project__desc">Team: Four other fourth year Computer Science majors</p>
+
+            <h4 class="project__subtitle">Description</h4>
+            <p class="project__para">
+              Heavy snowfall, strong winds, and low temperatures are common during the winter in northern Nevada. Knowledge of relevant road conditions is vital for safe travel for drivers taking trips through these regions. This information is currently accessible through multiple different sources. SnowPass streamlines the gathering of road condition data and compiles it into one easy-to-use application. After choosing any two points in California or Nevada, SnowPass will show the best route then display route specific weather, live traffic camera video, and Department of Transportation Tweets, helping drivers stay safe and informed.
+            </p>
+
+            <figure class="project__figure">
+              <img src="./img/objects/SnowPass-main.PNG" width="1280" height="720" alt="SnowPass main page" loading="lazy" decoding="async">
+            </figure>
+
+            <h4 class="project__subtitle">SnowPass summary video (presented by me) and demo</h4>
+            <div class="embed">
+              <iframe src="https://www.youtube.com/embed/vvGn8PDbXjU?start=77" title="SnowPass summary video and demo" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+
+            <div class="project__split">
+              <div>
+                <h4 class="project__subtitle">My Contribution</h4>
+                <ul class="bullets">
+                  <li>Cooperatively designed and programed front-end components</li>
+                  <li>Led the team in presentation of the application to university staff and Reno community members</li>
+                  <li>Communicated with California and Nevada departments of transportation and other leading inteligent transportation systems engineers</li>
+                  <li>Used agile methodology with scrum and sprint planning, dynamically adapting to project requirements and restrictions</li>
+                  <li>Implemented weather and X (formally known as Twitter) APIs</li>
+                </ul>
+              </div>
+              <figure class="project__team">
+                <img src="./img/objects/SnowPass-team.png" width="900" height="600" alt="The SnowPass team" loading="lazy" decoding="async">
+              </figure>
+            </div>
+          </article>
+
+          <article class="project">
+            <h3 class="project__title">Steel Bridge Inspection Robot</h3>
+            <p class="project__desc">Robot designed to inspect steel structures for defects or degrading materials</p>
+            <p class="project__desc">Role: Business Analyst and Software Specialist</p>
+            <p class="project__desc">Team: One other civil engineer and one other electrical engineer</p>
+
+            <h4 class="project__subtitle">Description</h4>
+            <p class="project__para">
+              Steel bridge inspection robot developed at the Advanced Robotics and Automation (ARA) Lab at the University of Nevada, Reno. The robot can climb on different steel bridge structures and collect visual and eddy current data for inspection. The eddy current data senses deep within the steel to detect defects and deterioration. Visual maps are then generated to show the condition of the steel.
+            </p>
+
+            <figure class="project__figure">
+              <img src="./img/objects/Steel-Robot-main.png" width="1280" height="720" alt="Steel bridge inspection robot" loading="lazy" decoding="async">
+            </figure>
+
+            <h4 class="project__subtitle">Steel Bridge Inspection Robot pitch meeting</h4>
+            <div class="embed">
+              <iframe src="https://www.youtube.com/embed/HZk49iFodzc" title="Steel Bridge Inspection Robot pitch meeting" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+
+            <h4 class="project__subtitle">My Contribution</h4>
+            <ul class="bullets">
+              <li>Researched software components to be able to answer software related questions from potential stakeholders</li>
+              <li>Cooperatively analyzed viability and created potential business plan for a steel bridge inspection robot company</li>
+              <li>Analyzed potential share of market, serviceable available market, and total available market</li>
+              <li>Led meeting with Pennsylvania Department of Transportation discussing potential viability of robot use</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <div class="divider" role="presentation"></div>
+
+      <!-- ============================ Personal Life ============================ -->
+      <section class="section" id="personal-life" aria-labelledby="personal-life-heading">
+        <div class="wrap">
+          <h2 class="section-title" id="personal-life-heading">Personal Life</h2>
+          <p class="lead">
+            Early career Software Engineer working in the San Francisco Bay Area with experience in network technologies. Exploring options for domain specialization in the industry. Ideally heading towards smart city related technology development. Passionate about software and hardware innovations in civil infrastructure such as robotic structure inspection, city wide sensor networks, and other smart city technologies. Aspiration to one day transition into an administrative position in the tech industry but currently enjoying the engineering aspect of the field. Interested in entrepreneurship or startup opportunities.
+          </p>
+
+          <h3 class="subhead">Professional Areas of Interest</h3>
+          <ul class="bullets">
+            <li>Smart city technologies</li>
+            <li>A.I. created music</li>
+            <li>A.I. Rationale Generation</li>
+            <li>Robotics and human robot interaction (HRI)</li>
+            <li>Internet of things optimization</li>
+          </ul>
+
+          <h3 class="subhead">Photography</h3>
+          <p class="lead">
+            I am a amateur photographer and my favorite types of composition are cityscape, landscape, and street photography. Here are some examples along with a link to my stock image profile.
+          </p>
+
+          <ul class="gallery" id="gallery">
+            <li><button class="gallery__item" type="button" data-full="./img/photos/img-1.jpg"><img src="./img/photos/img-1.jpg" alt="Photograph by Cardayell Morgan" loading="lazy" decoding="async"></button></li>
+            <li><button class="gallery__item" type="button" data-full="./img/photos/img-2.jpg"><img src="./img/photos/img-2.jpg" alt="Photograph by Cardayell Morgan" loading="lazy" decoding="async"></button></li>
+            <li><button class="gallery__item" type="button" data-full="./img/photos/img-3.jpg"><img src="./img/photos/img-3.jpg" alt="Photograph by Cardayell Morgan" loading="lazy" decoding="async"></button></li>
+            <li><button class="gallery__item" type="button" data-full="./img/photos/img-4.jpg"><img src="./img/photos/img-4.jpg" alt="Photograph by Cardayell Morgan" loading="lazy" decoding="async"></button></li>
+            <li><button class="gallery__item" type="button" data-full="./img/photos/img-5.jpg"><img src="./img/photos/img-5.jpg" alt="Photograph by Cardayell Morgan" loading="lazy" decoding="async"></button></li>
+            <li><button class="gallery__item" type="button" data-full="./img/photos/img-6.jpg"><img src="./img/photos/img-6.jpg" alt="Photograph by Cardayell Morgan" loading="lazy" decoding="async"></button></li>
+            <li><button class="gallery__item" type="button" data-full="./img/photos/img-7.jpg"><img src="./img/photos/img-7.jpg" alt="Photograph by Cardayell Morgan" loading="lazy" decoding="async"></button></li>
+            <li><button class="gallery__item" type="button" data-full="./img/photos/img-8.jpg"><img src="./img/photos/img-8.jpg" alt="Photograph by Cardayell Morgan" loading="lazy" decoding="async"></button></li>
+            <li><button class="gallery__item" type="button" data-full="./img/photos/img-9.jpg"><img src="./img/photos/img-9.jpg" alt="Photograph by Cardayell Morgan" loading="lazy" decoding="async"></button></li>
+            <li><button class="gallery__item" type="button" data-full="./img/photos/img-10.jpg"><img src="./img/photos/img-10.jpg" alt="Photograph by Cardayell Morgan" loading="lazy" decoding="async"></button></li>
+            <li><button class="gallery__item" type="button" data-full="./img/photos/img-11.jpg"><img src="./img/photos/img-11.jpg" alt="Photograph by Cardayell Morgan" loading="lazy" decoding="async"></button></li>
+            <li><button class="gallery__item" type="button" data-full="./img/photos/img-12.jpg"><img src="./img/photos/img-12.jpg" alt="Photograph by Cardayell Morgan" loading="lazy" decoding="async"></button></li>
+            <li><button class="gallery__item" type="button" data-full="./img/photos/img-13.jpg"><img src="./img/photos/img-13.jpg" alt="Photograph by Cardayell Morgan" loading="lazy" decoding="async"></button></li>
+          </ul>
+          <p class="entry__actions">
+            <a class="btn btn--ghost" href="https://www.shutterstock.com/g/Cardayell" target="_blank" rel="noopener">Shutterstock</a>
+          </p>
+
+          <h3 class="subhead">Lyrics Anotation</h3>
+          <p class="lead">
+            A hobby of mine is transcribing and annotating song lyrics by giving the lyrics context based on what the artist has said about the song. I do this on Genius.com and annotating lyrics is where I first experienced markup, which eventually led to me exploring web design, then computer science.
+          </p>
+          <p class="entry__actions">
+            <a class="btn btn--ghost" href="https://genius.com/Programus" target="_blank" rel="noopener">Genius Profile</a>
+          </p>
+        </div>
+      </section>
 
     </main>
-    <!-- ======================================== End Main Area ================================== -->
-    
-    <footer class="footer-area">
-      <div class="container">
-        <div>
-          <div class="footer-title text-center py-1">
-            <a href="#">Top of page</a>
-          </div>
-          <div class="email text-center">
-            <a href="mailto:contact@cardayell.com">contact@cardayell.com</i></a>
-          </div>
-          <div class="github-repository text-center">
-            <a href="https://github.com/Cardayellm/Professional-Website">Website Source code</a>
-          </div>
-        </div>
+
+    <footer class="site-footer">
+      <div class="wrap site-footer__inner">
+        <a href="#">Top of page</a>
+        <a href="mailto:contact@cardayell.com">contact@cardayell.com</a>
+        <a href="https://github.com/Cardayellm/Professional-Website" target="_blank" rel="noopener">Website source code</a>
       </div>
     </footer>
 
-    <!-- Jquery js file -->
-    <script src="js/jquery.3.6.0.js"></script>
+    <!-- ============================ Sticky contact bar ============================ -->
+    <div class="contact-bar">
+      <ul class="contact-bar__list" aria-label="Contact links">
+        <li>
+          <a class="contact-bar__link" href="mailto:contact@cardayell.com" aria-label="Email Cardayell">
+            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><path fill="currentColor" d="M2 5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5Zm2.4.4L12 11l7.6-5.6H4.4ZM20 7.2l-7.4 5.5a1 1 0 0 1-1.2 0L4 7.2V19h16V7.2Z"/></svg>
+          </a>
+        </li>
+        <li>
+          <a class="contact-bar__link" href="https://www.linkedin.com/in/cardayell-morgan/" target="_blank" rel="noopener" aria-label="Cardayell on LinkedIn">
+            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><path fill="currentColor" d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3V9Zm6 0h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05C19.5 8.65 21 10.5 21 14v7h-4v-6.2c0-1.48-.03-3.4-2.07-3.4-2.07 0-2.39 1.62-2.39 3.29V21H9V9Z"/></svg>
+          </a>
+        </li>
+        <li>
+          <a class="contact-bar__link" href="https://github.com/Cardayellm/" target="_blank" rel="noopener" aria-label="Cardayell on GitHub">
+            <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48l-.01-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.89 1.53 2.34 1.09 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.56 9.56 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85l-.01 2.75c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg>
+          </a>
+        </li>
+      </ul>
+    </div>
 
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" hidden>
+      <div class="lightbox__dialog" role="dialog" aria-modal="true" aria-label="Photo viewer">
+        <button class="lightbox__close" type="button" aria-label="Close">&times;</button>
+        <button class="lightbox__nav lightbox__nav--prev" type="button" aria-label="Previous photo">&#10094;</button>
+        <img class="lightbox__img" src="" alt="">
+        <button class="lightbox__nav lightbox__nav--next" type="button" aria-label="Next photo">&#10095;</button>
+        <p class="lightbox__count" aria-live="polite"></p>
+      </div>
+    </div>
 
-    <!-- Bootstrp js file -->
-    <script src="./js/bootstrap.min.js"></script>
-
-    <!-- custom js file -->
-    <script src="./js/main.js"></script>
-
+    <script src="js/main.js" defer></script>
+    <script src="js/gallery.js" defer></script>
 </body>
 </html>
