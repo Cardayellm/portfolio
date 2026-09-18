@@ -6,6 +6,23 @@
   var lightbox = document.getElementById("lightbox");
   if (!gallery || !lightbox) return;
 
+  /* Shuffle the photos into a new random order on every load. Reorder the
+     DOM itself (not just a data array) so the lightbox's prev/next order
+     and the visual grid order always match. */
+  (function shuffleGallery() {
+    var items = Array.prototype.slice.call(gallery.children);
+    for (var i = items.length - 1; i > 0; i--) {
+      var j = Math.floor(Math.random() * (i + 1));
+      var t = items[i]; items[i] = items[j]; items[j] = t;
+    }
+    items.forEach(function (li) { gallery.appendChild(li); });
+
+    /* Always start scrolled to the far left, regardless of the shuffle
+       above or the browser's own scroll-position restoration on reload. */
+    gallery.scrollLeft = 0;
+    requestAnimationFrame(function () { gallery.scrollLeft = 0; });
+  })();
+
   var img = lightbox.querySelector(".lightbox__img");
   var count = lightbox.querySelector(".lightbox__count");
   var btnClose = lightbox.querySelector(".lightbox__close");
@@ -90,4 +107,30 @@
     var dx = e.changedTouches[0].clientX - startX;
     if (Math.abs(dx) > 45) step(dx < 0 ? 1 : -1);
   }, { passive: true });
+
+  /* --- Carousel side buttons ------------------------------------------- */
+  var wrap = gallery.closest(".gallery-wrap");
+  if (wrap) {
+    var navPrev = wrap.querySelector(".gallery-nav--prev");
+    var navNext = wrap.querySelector(".gallery-nav--next");
+
+    var scrollByPage = function (dir) {
+      gallery.scrollBy({ left: dir * gallery.clientWidth * 0.9, behavior: "smooth" });
+    };
+
+    if (navPrev) navPrev.addEventListener("click", function () { scrollByPage(-1); });
+    if (navNext) navNext.addEventListener("click", function () { scrollByPage(1); });
+
+    var updateNavState = function () {
+      var max = gallery.scrollWidth - gallery.clientWidth;
+      var atStart = gallery.scrollLeft <= 1;
+      var atEnd = gallery.scrollLeft >= max - 1;
+      if (navPrev) navPrev.hidden = atStart;
+      if (navNext) navNext.hidden = max <= 1 || atEnd;
+    };
+
+    gallery.addEventListener("scroll", updateNavState, { passive: true });
+    window.addEventListener("resize", updateNavState);
+    updateNavState();
+  }
 })();

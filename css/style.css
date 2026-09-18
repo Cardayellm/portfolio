@@ -543,6 +543,7 @@ a:hover { color: var(--accent); }
   color: var(--muted);
   margin: 0 0 var(--space-2xs);
 }
+.project__desc strong { color: var(--title-color); }
 .project__subtitle {
   font-weight: 700;
   font-size: var(--step-1);
@@ -575,33 +576,79 @@ a:hover { color: var(--accent); }
 }
 @media (min-width: 820px) {
   .project__split { grid-template-columns: 1.2fr 0.8fr; align-items: start; }
+
+  /* The volunteering photo runs the full height of its column, level with
+     the "Volunteering" heading above the text, showing the complete photo
+     rather than a fixed-height crop. */
+  #personal-life .project__split { grid-template-columns: 1fr 1fr; align-items: stretch; }
+  #personal-life .project__team { display: flex; }
+  #personal-life .project__team img { width: 100%; height: 100%; object-fit: contain; }
 }
 
 /* ------------------------------------------------------------------ About --- */
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(clamp(130px, 28vw, 210px), 1fr));
-  gap: 0.5rem;
+.gallery-wrap {
+  position: relative;
   margin: var(--space-md) 0;
+}
+.gallery {
+  --cell: clamp(108px, 24vw, 170px);
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-rows: repeat(3, var(--cell));
+  grid-auto-columns: var(--cell);
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity;
+  scroll-behavior: smooth;
 }
 .gallery__item {
   display: block;
   width: 100%;
+  height: 100%;
   padding: 0;
   border: 1px solid var(--border-color);
   border-radius: var(--radius);
   overflow: hidden;
   background: var(--bg-elevated);
   cursor: pointer;
+  scroll-snap-align: start;
 }
 .gallery__item img {
   width: 100%;
+  height: 100%;
   aspect-ratio: 1;
   object-fit: cover;
   transition: transform .3s ease;
 }
 .gallery__item:hover img,
 .gallery__item:focus-visible img { transform: scale(1.05); }
+
+.gallery-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+  border-radius: 50%;
+  background: var(--bg-elevated);
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  box-shadow: var(--shadow-md);
+  cursor: pointer;
+  transition: color .2s ease, background .2s ease, opacity .2s ease;
+}
+.gallery-nav:hover { background: var(--primary-color); color: var(--primary-color2); }
+.gallery-nav--prev { left: 0.5rem; }
+.gallery-nav--next { right: 0.5rem; }
+.gallery-nav[hidden] { display: none; }
 
 /* ------------------------------------------------------------- Contact bar --- */
 .contact-bar {

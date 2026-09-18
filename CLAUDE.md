@@ -33,7 +33,7 @@ fonts/                Roboto + OCR-A .ttf files
 
 `header` nav · `#main` → `.hero` (name + audio pronunciation button, summary,
 résumé CTA), `#skills`, `#experience` (Work Experience), `#education`,
-`#projects`, `#personal-life` (bio, interests, photography gallery, lyrics)
+`#projects`, `#personal-life` (bio, photography gallery, volunteering)
 · `footer` · `.contact-bar` (sticky bottom bar with email/LinkedIn/GitHub,
 present on every page view) · `#lightbox` (photo viewer markup).
 
@@ -74,8 +74,8 @@ Never commit an unoptimized image. Before adding photos:
 | Degree / transcript | the `.entry` inside `#education` |
 | Skills | `.skills` groups inside `#skills` |
 | Projects | `<article class="project">` blocks inside `#projects` |
-| Bio, interests, photography text | `#personal-life` |
-| Gallery photos | the `<ul class="gallery">` list + files in `img/photos/` |
+| Bio, photography, and volunteering text | `#personal-life` |
+| Gallery photos | the `<ul class="gallery">` list + files in `img/photos/` (shuffled and capped to 3 rows by `js/gallery.js`) |
 | Contact links | `.contact-bar__list` (sticky bottom bar, all pages) and the `footer` |
 | Name pronunciation audio | `.pronounce__audio` `<source>` in `.hero`; file lives in `audio/` |
 
