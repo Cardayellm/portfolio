@@ -127,4 +127,133 @@
       });
     });
   }
+
+  /* --- Skills: fade groups in row by row ------------------------------
+     The grid uses auto-fit, so how many groups share a row depends on
+     viewport width (5 rows on mobile, 2 on desktop, etc). Rather than
+     guess column counts per breakpoint, read each group's actual
+     offsetTop once the section scrolls into view and bucket groups that
+     land on the same line, then stagger a fade-in by row. */
+  var skillsSection = document.getElementById("skills");
+  var skillGroups = Array.prototype.slice.call(
+    document.querySelectorAll(".skills__group")
+  );
+  var reducedMotion =
+    window.matchMedia &&
+    window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  if (skillsSection && skillGroups.length && !reducedMotion) {
+    var revealByRow = function () {
+      var rowTops = [];
+      skillGroups.forEach(function (group) {
+        var top = group.offsetTop;
+        var known = rowTops.some(function (t) {
+          return Math.abs(t - top) < 4;
+        });
+        if (!known) rowTops.push(top);
+      });
+      rowTops.sort(function (a, b) {
+        return a - b;
+      });
+
+      skillGroups.forEach(function (group) {
+        var rowIndex = rowTops.findIndex(function (t) {
+          return Math.abs(t - group.offsetTop) < 4;
+        });
+        group.style.transitionDelay = rowIndex * 0.15 + "s";
+      });
+
+      /* Double rAF: a single rAF isn't a reliable guarantee the browser
+         has painted the opacity:0 state yet, so the transition can get
+         coalesced away and the rows just snap straight to visible. The
+         nested rAF forces one full painted frame of the hidden state
+         first. */
+      requestAnimationFrame(function () {
+        requestAnimationFrame(function () {
+          skillGroups.forEach(function (group) {
+            group.classList.add("is-visible");
+          });
+        });
+      });
+    };
+
+    /* A single IntersectionObserver handles both cases: if the section
+       already satisfies the threshold/rootMargin at observe()-time (tall
+       viewport), it fires right away; otherwise it waits for a real
+       scroll to carry the section past that line. */
+    if ("IntersectionObserver" in window) {
+      var skillsObserver = new IntersectionObserver(
+        function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              revealByRow();
+              skillsObserver.disconnect();
+            }
+          });
+        },
+        { threshold: 0.15, rootMargin: "0px 0px -40% 0px" }
+      );
+      skillsObserver.observe(skillsSection);
+    } else {
+      revealByRow();
+    }
+  } else {
+    skillGroups.forEach(function (group) {
+      group.classList.add("is-visible");
+    });
+  }
+
+  /* --- Work Experience / Education: fade each entry in independently as
+     it scrolls into view (each entry gets its own observer entry/
+     unobserve, so the whole section doesn't reveal at once when just the
+     first entry shows). */
+  var initEntryFade = function (selector) {
+    var entries = Array.prototype.slice.call(
+      document.querySelectorAll(selector)
+    );
+    if (!entries.length) return;
+
+    var revealEntry = function (entry) {
+      requestAnimationFrame(function () {
+        requestAnimationFrame(function () {
+          entry.classList.add("is-visible");
+        });
+      });
+    };
+
+    if (reducedMotion) {
+      entries.forEach(function (entry) {
+        entry.classList.add("is-visible");
+      });
+      return;
+    }
+
+    if ("IntersectionObserver" in window) {
+      var observer = new IntersectionObserver(
+        function (observed) {
+          observed.forEach(function (item) {
+            if (item.isIntersecting) {
+              revealEntry(item.target);
+              observer.unobserve(item.target);
+            }
+          });
+        },
+        { threshold: 0.15, rootMargin: "0px 0px -15% 0px" }
+      );
+      entries.forEach(function (entry) {
+        observer.observe(entry);
+      });
+    } else {
+      entries.forEach(revealEntry);
+    }
+  };
+
+  initEntryFade("#experience .entry");
+  initEntryFade("#education .entry");
+  initEntryFade("#projects .project");
+  initEntryFade(
+    "#personal-life .personal-life__summary, " +
+      "#personal-life .personal-life__photography, " +
+      "#personal-life .project__split"
+  );
 })();

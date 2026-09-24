@@ -333,10 +333,6 @@ a:hover { color: var(--accent); }
   max-width: 56ch;
   margin: 0 0 var(--space-md);
   padding: 1rem 1.25rem;
-  background: var(--bg-elevated);
-  border: 2px solid var(--primary-color);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow-sm);
 }
 .hero__actions {
   display: flex;
@@ -392,6 +388,40 @@ a:hover { color: var(--accent); }
   }
 }
 
+/* Hero fade-in: title, summary, and portrait arrive together; the resume/contact actions follow slightly later. */
+.hero__title,
+.hero__summary,
+.hero__media,
+.hero__actions {
+  opacity: 0;
+  animation: hero-fade-in 0.8s ease forwards;
+}
+.hero__title { animation-delay: 0.05s; }
+.hero__media,
+.hero__summary { animation-delay: 0.25s; }
+.hero__actions { animation-delay: 0.6s; }
+
+@keyframes hero-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero__title,
+  .hero__summary,
+  .hero__media,
+  .hero__actions {
+    animation: none;
+    opacity: 1;
+  }
+}
+
 /* -------------------------------------------------- Experience / Education --- */
 .timeline { display: grid; gap: var(--space-lg); }
 
@@ -402,6 +432,26 @@ a:hover { color: var(--accent); }
   border-top: 1px solid var(--border-color);
 }
 .timeline .entry:first-child { padding-top: 0; border-top: 0; }
+
+#experience .entry,
+#education .entry {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+#experience .entry.is-visible,
+#education .entry.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (prefers-reduced-motion: reduce) {
+  #experience .entry,
+  #education .entry {
+    transition: none;
+    opacity: 1;
+    transform: none;
+  }
+}
 
 .entry__company {
   font-weight: 600;
@@ -502,6 +552,22 @@ a:hover { color: var(--accent); }
   gap: var(--space-lg);
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
 }
+.skills__group {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.skills__group.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (prefers-reduced-motion: reduce) {
+  .skills__group {
+    transition: none;
+    opacity: 1;
+    transform: none;
+  }
+}
 .skills__label {
   font-size: var(--step-1);
   font-weight: 700;
@@ -529,6 +595,32 @@ a:hover { color: var(--accent); }
   border-top: 1px solid var(--border-color);
 }
 .project:first-of-type { padding-top: 0; border-top: 0; }
+
+#projects .project,
+#personal-life .personal-life__summary,
+#personal-life .personal-life__photography,
+#personal-life .project__split {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+#projects .project.is-visible,
+#personal-life .personal-life__summary.is-visible,
+#personal-life .personal-life__photography.is-visible,
+#personal-life .project__split.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (prefers-reduced-motion: reduce) {
+  #projects .project,
+  #personal-life .personal-life__summary,
+  #personal-life .personal-life__photography,
+  #personal-life .project__split {
+    transition: none;
+    opacity: 1;
+    transform: none;
+  }
+}
 
 .project__title {
   font-family: var(--font-body);
